@@ -1,0 +1,14 @@
+// section transition styles
+.section
+  opacity: 0
+  visibility: hidden
+  transition: opacity .4s ease-in-out, visibility 0s .4s
+
+
+  &--next
+    transform: translateY(-45px)
+    transition: transform .4s ease-in-out
+
+  &--prev
+    transform: translateY(45px)
+    transition: transform .4s ease-in-out
