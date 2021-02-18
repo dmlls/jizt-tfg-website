@@ -1008,23 +1008,14 @@
     }
 
     function i(t, e, i) {
-        $(".main-content").children().removeClass("section--is-active"), $(".main-content").children().eq(e).addClass("section--is-active"), $(".main-content .section").children().removeClass("section--next section--prev"), t === i && 0 === e || 0 === t && e === i ? $(".main-content .section").children().removeClass("section--next section--prev") : e > t ? $(".main-content").children().eq(t).children().addClass("section--next") : $(".main-content").children().eq(t).children().addClass("section--prev"), 0 !== e && e !== i ? $(".header--cta").addClass("is-active") : $(".header--cta").removeClass("is-active")
-    }
-
-    function n() {
-        $(".header--nav-toggle").click(function() {
-            $(".perspective").addClass("perspective--modalview"), setTimeout(function() {
-                $(".perspective").addClass("effect-rotate-left--animate")
-            }, 25), $(".outer-nav, .outer-nav li, .outer-nav--return").addClass("is-vis")
-        }), $(".outer-nav--return, .outer-nav li").click(function() {
-            $(".perspective").removeClass("effect-rotate-left--animate"), setTimeout(function() {
-                $(".perspective").removeClass("perspective--modalview")
-            }, 400), $(".outer-nav, .outer-nav li, .outer-nav--return").removeClass("is-vis")
-        })
+        $(".main-content").children().removeClass("section--is-active"),
+            $(".main-content").children().eq(e).addClass("section--is-active"),
+            $(".main-content .section").children().removeClass("section--next section--prev"),
+            t === i && 0 === e || 0 === t && e === i ? $(".main-content .section").children().removeClass("section--next section--prev") : e > t ? $(".main-content").children().eq(t).children().addClass("section--next") : $(".main-content").children().eq(t).children().addClass("section--prev")
     }
 
     function s() {
-        $(".slider--prev, .slider--next").click(function() {
+        $(".slider--prev, .slider--next").on('click', function() {
             var t = $(this),
                 e = $(".slider").find(".slider--item-left"),
                 i = $(".slider").children().index(e),
@@ -1065,7 +1056,7 @@
                 o = !0
             }, 800), t(-1))
         }
-    }), $(".side-nav li, .outer-nav li").click(function() {
+    }), $(".side-nav li").click(function() {
         if (!$(this).hasClass("is-active")) {
             var t = $(this),
                 n = t.parent().find(".is-active"),
@@ -1081,7 +1072,7 @@
         direction: Hammer.DIRECTION_VERTICAL
     }), c.on("swipeup swipedown", function(e) {
         t(e)
-    }), $(document).keyup(function(e) {
-        $(".outer-nav").hasClass("is-vis") || (e.preventDefault(), t(e))
-    }), n(), s(), r()
+    }), $(document).on('keyup', function(e) {
+        e.preventDefault(), t(e)
+    }), s(), r()
 });
