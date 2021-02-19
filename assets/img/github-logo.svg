@@ -17,13 +17,13 @@
   <metadata
      id="metadata12">
     <rdf:RDF>
-      <cc:Work
+      <cc:screenshot
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <dc:title>github</dc:title>
-      </cc:Work>
+      </cc:screenshot>
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview

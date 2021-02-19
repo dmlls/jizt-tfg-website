@@ -1039,7 +1039,7 @@
     }
 
     function r() {
-        $(".work-request--information input").focusout(function() {
+        $(".screenshot-request--information input").focusout(function() {
             var t = $(this).val();
             "" === t ? $(this).removeClass("has-value") : $(this).addClass("has-value"), window.scrollTo(0, 0)
         })
@@ -1066,6 +1066,7 @@
             e(r), i(s, r, o)
         }
     });
+
     var l = document.getElementById("viewport"),
         c = new Hammer(l);
     c.get("swipe").set({

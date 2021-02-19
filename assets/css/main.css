@@ -212,7 +212,7 @@ body{
     position: absolute;
     width: 100%;
     max-width:95%;
-    height: 90%;
+    height: 95%;
     margin:0 10% 0 5%;
     display: flex;
     bottom: 0;
@@ -573,7 +573,7 @@ body{
     margin-bottom:0
 }
 
-.work{
+.screenshot{
     position:relative;
     display:-webkit-box;
     display:-webkit-flex;
@@ -591,97 +591,116 @@ body{
     -webkit-justify-content:center;
     -ms-flex-pack:center;
     justify-content:center;
-    margin:0 auto
+    margin: 0 auto 0 0;
 }
 
-.work h2{
+.screenshot h2{
     margin:0 0 20px 0;
-    font-size:30px;
-    text-align:center
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 500;
 }
-.work--lockup{
-    position:relative
+.screenshot--lockup{
+    position:relative;
+    height: 80%;
 }
-.work--lockup .slider{
+.screenshot--lockup .slider{
     position:relative;
     display:-webkit-box;
     display:-webkit-flex;
     display:-ms-flexbox;
     display:flex;
     width:80%;
+    height: 95%;
     margin:0 auto;
     padding:0;
     list-style:none
 }
-.work--lockup .slider--item{
+.screenshot--lockup .slider--item{
     position:absolute;
+    height: 100%;
     display:none;
     text-align:center
 }
-.work--lockup .slider--item a{
+.screenshot--lockup .slider--item a{
+    height: 100%;
     text-decoration:none;
-    color:#858585
 }
-.work--lockup .slider--item-title{
-    margin-top:10px;
-    font-size:12px;
-    font-weight:700;
-    text-transform:uppercase
+.screenshot--lockup .slider--item-title{
+    height: auto;
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform:uppercase;
+    color: #fff;
 }
-.work--lockup .slider--item-description{
+.screenshot--lockup .slider--item-description{
     display:none;
-    max-width:250px;
-    margin:0 auto
-}
-.work--lockup .slider--item-image{
-    width:150px;
-    height:150px;
     margin:0 auto;
-    border-radius:50%;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.screenshot--lockup .slider--item-image{
+    height: 100%;
+    width: 100%;
+    margin:0 auto;
     overflow:hidden
 }
-.work--lockup .slider--item-image img{
-    width:100%
+.screenshot--lockup .slider--item-image img{
+    height: 100%;
 }
-.work--lockup .slider--item-left{
+.screenshot--lockup .slider--item-left{
+    height: 60%;
     top:50%;
     left:0;
     -webkit-transform:translateY(-50%);
     transform:translateY(-50%);
-    display:block
+    display:block;
+    filter: brightness(0.3);
 }
-.work--lockup .slider--item-right{
+.screenshot--lockup .slider--item-right{
+    height: 60%;
     top:50%;
     right:0;
     -webkit-transform:translateY(-50%);
     transform:translateY(-50%);
-    display:block
+    display:block;
+    filter: brightness(0.3);
 }
-.work--lockup .slider--item-center{
+
+.screenshot--lockup .slider--item-center{
     position:relative;
+    width: 60%;
     top:30px;
     left:50%;
     -webkit-transform:translateX(-50%);
     transform:translateX(-50%);
-    display:block
+    display:block;
+    z-index: 1;
 }
-.work--lockup .slider--item-center a{
-    color:#fff
+.screenshot--lockup .slider--item-center a{
+    width: 100%;
 }
-.work--lockup .slider--item-center .slider--item-title{
+.screenshot--lockup .slider--item-center .slider--item-title{
+    display: block;
     margin-top:25px;
-    font-size:16px
+    font-size: 1.2rem;
 }
-.work--lockup .slider--item-center .slider--item-description{
-    display:block
+.screenshot--lockup .slider--item-center .slider--item-description{
+    display:block;
+    color: #cecece;
 }
-.work--lockup .slider--item-center .slider--item-image{
-    width:300px;
-    height:300px
+.screenshot--lockup .slider--item-center .slider--item-image{
+    height: 80%;
 }
-.work--lockup .slider--next,.work--lockup .slider--prev{
+.screenshot--lockup .slider--next,.screenshot--lockup .slider--prev{
     position:absolute;
-    top:160px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     display:-webkit-box;
     display:-webkit-flex;
     display:-ms-flexbox;
@@ -700,14 +719,14 @@ body{
     border-radius:50%;
     cursor:pointer
 }
-.work--lockup .slider--next svg,.work--lockup .slider--prev svg{
+.screenshot--lockup .slider--next svg,.screenshot--lockup .slider--prev svg{
     width:20px;
     fill:#fff
 }
-.work--lockup .slider--next{
+.screenshot--lockup .slider--next{
     right:0
 }
-.work--lockup .slider--prev{
+.screenshot--lockup .slider--prev{
     left:0
 }
 
@@ -957,7 +976,7 @@ body{
     font-size:30px;
     text-align:center
 }
-.work-request{
+.screenshot-request{
     display:-webkit-box;
     display:-webkit-flex;
     display:-ms-flexbox;
@@ -974,7 +993,7 @@ body{
     align-items:center;
     color:#fff
 }
-.work-request input[type="submit"]{
+.screenshot-request input[type="submit"]{
     width:400px;
     max-width:100%;
     line-height:50px;
@@ -985,10 +1004,10 @@ body{
     border:none;
     border-radius:0
 }
-.work-request input[type="submit"]:focus{
+.screenshot-request input[type="submit"]:focus{
     outline:none
 }
-.work-request--options{
+.screenshot-request--options{
     display:-webkit-box;
     display:-webkit-flex;
     display:-ms-flexbox;
@@ -1005,7 +1024,7 @@ body{
     align-items:center;
     margin:30px 0
 }
-.work-request--options .options-a{
+.screenshot-request--options .options-a{
     display:-webkit-box;
     display:-webkit-flex;
     display:-ms-flexbox;
@@ -1016,7 +1035,7 @@ body{
     -ms-flex-pack:justify;
     justify-content:space-between
 }
-.work-request--options .options-b{
+.screenshot-request--options .options-b{
     display:-webkit-box;
     display:-webkit-flex;
     display:-ms-flexbox;
@@ -1029,7 +1048,7 @@ body{
     -ms-flex-pack:distribute;
     justify-content:space-around
 }
-.work-request--options label{
+.screenshot-request--options label{
     display:block;
     width:200px;
     margin-bottom:30px;
@@ -1042,7 +1061,7 @@ body{
     -webkit-transition:background-color .2s ease-in-out,border-color .2s ease-in-out;
     transition:background-color .2s ease-in-out,border-color .2s ease-in-out
 }
-.work-request--options label svg{
+.screenshot-request--options label svg{
     position:relative;
     left:-5px;
     width:0;
@@ -1050,17 +1069,17 @@ body{
     -webkit-transition:width .2s ease-in-out;
     transition:width .2s ease-in-out
 }
-.work-request--options input[type="checkbox"]{
+.screenshot-request--options input[type="checkbox"]{
     display:none
 }
-.work-request--options input[type="checkbox"]:checked+label{
+.screenshot-request--options input[type="checkbox"]:checked+label{
     background-color:#0f33ff;
     border-color:#0f33ff
 }
-.work-request--options input[type="checkbox"]:checked+label svg{
+.screenshot-request--options input[type="checkbox"]:checked+label svg{
     width:15px
 }
-.work-request--information{
+.screenshot-request--information{
     display:-webkit-box;
     display:-webkit-flex;
     display:-ms-flexbox;
@@ -1072,14 +1091,14 @@ body{
     justify-content:space-between;
     margin-bottom:60px
 }
-.work-request--information .information-name,.work-request--information .information-email{
+.screenshot-request--information .information-name,.screenshot-request--information .information-email{
     position:relative;
     width:45%;
     height:50px;
     font-size:30px;
     font-weight:300
 }
-.work-request--information input[type="text"],.work-request--information input[type="email"]{
+.screenshot-request--information input[type="text"],.screenshot-request--information input[type="email"]{
     width:100%;
     padding:0 0 5px 0;
     background-color:transparent;
@@ -1087,11 +1106,11 @@ body{
     border-bottom:1px solid #fff;
     border-radius:0
 }
-.work-request--information input[type="text"]:focus,.work-request--information input[type="email"]:focus{
+.screenshot-request--information input[type="text"]:focus,.screenshot-request--information input[type="email"]:focus{
     outline:none;
     background-color:#0c0c0c
 }
-.work-request--information label{
+.screenshot-request--information label{
     position:absolute;
     top:0;
     left:0;
@@ -1099,7 +1118,7 @@ body{
     -webkit-transition:top .2s ease-in-out,font-size .2s ease-in-out;
     transition:top .2s ease-in-out,font-size .2s ease-in-out
 }
-.work-request--information input:focus+label,.work-request--information input.has-value+label{
+.screenshot-request--information input:focus+label,.screenshot-request--information input.has-value+label{
     top:-15px;
     font-size:14px
 }

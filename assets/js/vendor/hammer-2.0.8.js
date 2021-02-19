@@ -1316,7 +1316,7 @@ function cleanTouchActions(actions) {
     // if both pan-x and pan-y are set (different recognizers
     // for different directions, e.g. horizontal pan but vertical swipe?)
     // we need none (as otherwise with pan-x pan-y combined none of these
-    // recognizers will work, since the browser would handle all panning
+    // recognizers will screenshot, since the browser would handle all panning
     if (hasPanX && hasPanY) {
         return TOUCH_ACTION_NONE;
     }
